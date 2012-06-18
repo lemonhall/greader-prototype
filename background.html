@@ -38,14 +38,14 @@ function InitializeXFrameOptionsWorkaround()
 }
 
 var ifsuceed_overide_xframeoption=InitializeXFrameOptionsWorkaround();
-console.log("ifsuceed_overide_xframeoption"+ifsuceed_overide_xframeoption);
+// console.log("ifsuceed_overide_xframeoption"+ifsuceed_overide_xframeoption);
 
-//background 是作为一个中转而存在的，它接受onRequest，来自gr.js的消息，然后转发？	
-chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
-    chrome.tabs.sendRequest(sender.tab.id, request);
-    sendResponse({});
-});
-console.log('Hello ???');
+// //background 是作为一个中转而存在的，它接受onRequest，来自gr.js的消息，然后转发？	
+// chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
+//     chrome.tabs.sendRequest(sender.tab.id, request);
+//     sendResponse({});
+// });
+// console.log('Hello ???');
 
     </script>
   </head>

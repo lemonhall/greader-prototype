@@ -12,8 +12,7 @@
   "content_scripts" : [
     {
       "matches" : [
-        "http://www.douban.com/*",
-        "http://api.douban.com/*"
+        "http://www.douban.com/update/"
       ],
       "js" : ["jquery-1.7.2.min.js","contentscript.js"],
       "run_at" : "document_end",
@@ -21,7 +20,7 @@
     },
     {
       "matches" : [
-        "http://www.google.com/reader/view/*"
+        "http://weibo.com/*"
       ],
       "js" : ["jquery-1.7.2.min.js","gr.js"],
       "run_at" : "document_end",
@@ -29,6 +28,11 @@
     }
   ],
     "permissions": [
-        "tabs","webRequest","webRequestBlocking","http://www.douban.com/*","http://api.douban.com/people/*", "http://www.google.com/*"
+        "tabs","webRequest","webRequestBlocking",
+        "http://www.douban.com/*",
+        "http://api.douban.com/people/*", 
+        "http://www.google.com/*",
+        "https://www.google.com/*",
+        "http://weibo.com/*"
     ]
 }
