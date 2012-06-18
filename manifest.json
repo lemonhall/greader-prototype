@@ -1,0 +1,34 @@
+﻿{
+  "name" : "验证从BG插入IFRAME进而操作的插件",
+  "version" : "0.1",
+  "description" : "验证QQ-验证从BG插入IFRAME进而操作的插件",
+  "browser_action": {
+      "default_icon": "doubanicon-24.png",
+      "default_title": "验证QQ-验证从BG插入IFRAME进而操作的插件"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "content_scripts" : [
+    {
+      "matches" : [
+        "http://www.douban.com/*",
+        "http://api.douban.com/*"
+      ],
+      "js" : ["jquery-1.7.2.min.js","contentscript.js"],
+      "run_at" : "document_end",
+      "all_frames" : false
+    },
+    {
+      "matches" : [
+        "http://www.google.com/reader/view/*"
+      ],
+      "js" : ["jquery-1.7.2.min.js","gr.js"],
+      "run_at" : "document_end",
+      "all_frames" : true
+    }
+  ],
+    "permissions": [
+        "tabs","webRequest","webRequestBlocking","http://www.douban.com/*","http://api.douban.com/people/*", "http://www.google.com/*"
+    ]
+}
